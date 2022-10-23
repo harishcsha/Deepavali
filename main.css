@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento");
+
+body {
+  background: #000511
+    url(http://www.happyholidays2014.com/wp-content/uploads/2014/12/new-year-countdown-2015.jpg);
+  font-family: "Sacramento", cursive;
+  background-size: cover;
+  margin: 0;
+}
+
+#wire {
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  top: -80px;
+  border-bottom: 3px solid #222;
+  height: 100px;
+}
+
+#wire li {
+  position: relative;
+  list-style: none;
+  margin: 0 15px;
+  padding: 0;
+  display: inline-block;
+  width: 15px;
+  height: 30px;
+  border-radius: 50%;
+  top: 102px;
+  background: #fff;
+  animation-name: even-flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+#wire li:nth-child(odd) {
+  animation-name: odd-flash;
+}
+
+#wire li:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  border-radius: 4px;
+  top: -5px;
+  left: 0;
+  background: #444;
+}
+
+@keyframes even-flash {
+  0%,
+  100% {
+    background: rgba(185, 255, 65, 1);
+    box-shadow: 0px 2px 20px 4px rgba(255, 230, 65, 1);
+  }
+
+  50% {
+    background: rgba(185, 255, 65, 0.5);
+    box-shadow: 0px 2px 20px 4px rgba(185, 255, 65, 0.3);
+  }
+}
+
+@keyframes odd-flash {
+  50% {
+    background: rgba(0, 0, 255, 1);
+    box-shadow: 0px 2px 20px 4px rgba(255, 230, 65, 1);
+  }
+
+  0%,
+  100% {
+    background: rgba(0, 0, 255, 0.5);
+    box-shadow: 0px 2px 20px 4px rgba(0, 0, 255, 0.3);
+  }
+}
+
+.container {
+  height: 200px;
+  width: 600px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.container .title {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0px 2px 1px orange, 0px 0px 6px orangered,
+    0px 5px 10px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.container .fromTxt {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0px 2px 1px rgb(176, 237, 23), 0px 0px 6px rgb(255, 162, 0),
+    0px 5px 10px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.fireworks {
+  list-style-type: none;
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  top: 270px;
+}
+
+.karbonIcon {
+  position: relative;
+  left: 180px;
+  top: -40px;
+}
+.audioCntr {
+  position: relative;
+  left: 160px;
+  top: 160px;
+}
+.fireworks li {
+  display: inline-block;
+  margin: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 500px;
+  position: relative;
+  background-color: #8d6e63;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.fireworks li::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: #000511;
+  width: 100%;
+  border-radius: 500px;
+  top: -40%;
+  left: -30%;
+}
+
+.fireworks li::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: #000511;
+  width: 100%;
+  border-radius: 500px;
+  top: -40%;
+  right: -30%;
+}
+
+.fireworks li span {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  transform: rotate(45deg);
+  animation: fire 0.3s ease infinite;
+}
+
+.fireworks li:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+
+.fireworks li:nth-child(2) span {
+  animation-delay: 1s;
+}
+
+.fireworks li:nth-child(3) span {
+  animation-delay: 1.5s;
+}
+
+.fireworks li:nth-child(4) span {
+  animation-delay: 2s;
+}
+
+.fireworks li:nth-child(5) span {
+  animation-delay: 2.5s;
+}
+
+.fireworks li:nth-child(6) span {
+  animation-delay: 3s;
+}
+
+@keyframes fire {
+  0%,
+  100% {
+    transform: rotate(55deg);
+    width: 20px;
+    background: linear-gradient(90deg, orange, orangered);
+  }
+  50% {
+    transform: rotate(35deg);
+    width: 18px;
+    background: linear-gradient(90deg, orange, orangered);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    left: -100px;
+  }
+
+  .title {
+    font-size: 50px !important;
+  }
+
+  .fromTxt {
+    font-size: 50px !important;
+  }
+}
