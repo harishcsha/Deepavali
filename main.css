@@ -117,8 +117,9 @@ body {
   position: relative;
   /* left: 180px;
   top: -40px; */
-  right: 60px;
-  bottom: 270px;
+  right: -50px;
+  bottom: 200px;
+  width: 480px;
 }
 .audioCntr {
   position: relative;
