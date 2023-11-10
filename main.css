@@ -109,13 +109,16 @@ body {
   position: absolute;
   padding: 0;
   width: 100%;
-  top: 270px;
+  /* top: 270px; */
+  top: 40px;
 }
 
 .karbonIcon {
   position: relative;
-  left: 180px;
-  top: -40px;
+  /* left: 180px;
+  top: -40px; */
+  right: 60px;
+  bottom: 270px;
 }
 .audioCntr {
   position: relative;
