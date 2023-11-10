@@ -124,7 +124,8 @@ body {
 .audioCntr {
   position: relative;
   left: 160px;
-  top: 160px;
+  /* top: 160px; */
+  bottom: 310px;
 }
 .fireworks li {
   display: inline-block;
